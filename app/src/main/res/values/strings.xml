@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">metaverse</string>
+    <string name="login">Login</string>
+    <string name="login_lottie_animation_url">https://assets6.lottiefiles.com/packages/lf20_md2b3ywy.json</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
