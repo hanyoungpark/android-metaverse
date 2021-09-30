@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">metaverse</string>
+    <string name="splash_animation">https://assets4.lottiefiles.com/packages/lf20_ksgju37j.json</string>
     <string name="login">Login</string>
     <string name="login_lottie_animation_url">https://assets6.lottiefiles.com/packages/lf20_md2b3ywy.json</string>
     <string name="enter_your_email">Enter your email</string>
