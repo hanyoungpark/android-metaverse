@@ -3,6 +3,7 @@ package io.hanyoungpark.metaverse
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import com.google.firebase.messaging.FirebaseMessaging
@@ -13,9 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val loginIntent = Intent(this, LoginActivity::class.java).apply {
-            flags  = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-        }
-        startActivity(loginIntent)
+        Handler(mainLooper).postDelayed({
+            val loginIntent = Intent(this, LoginActivity::class.java).apply {
+                flags  = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            }
+            startActivity(loginIntent)
+        }, 4000)
     }
 }
