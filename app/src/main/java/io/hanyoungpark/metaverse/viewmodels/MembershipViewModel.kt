@@ -33,7 +33,6 @@ class MembershipViewModel @Inject constructor(
     }
 
     fun loginEmailAndPassword(email: String, password: String) = viewModelScope.launch {
-        Log.d("ViewModel", "login $email, $password")
         membershipRepository.loginEmailAndPassword(email, password).collect {
             when (it) {
                 is AuthenticateState.Success -> _user.postValue(it.user)
