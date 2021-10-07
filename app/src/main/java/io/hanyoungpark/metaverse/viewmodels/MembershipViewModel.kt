@@ -41,7 +41,12 @@ class MembershipViewModel @Inject constructor(
         }
     }
 
-    fun signUpEmailAndPassword(email: String, password: String) = viewModelScope.launch {
-
+    fun signUpEmailAndPassword(email: String, password: String, passwordConfirm: String) = viewModelScope.launch {
+        membershipRepository.signUpEmailAndPassword(email, password).collect {
+            when (it) {
+                is AuthenticateState.Success -> _user.postValue(it.user)
+                is AuthenticateState.Error -> _user.postValue(null)
+            }
+        }
     }
 }
