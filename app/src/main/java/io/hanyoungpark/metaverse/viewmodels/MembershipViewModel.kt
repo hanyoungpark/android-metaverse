@@ -40,4 +40,8 @@ class MembershipViewModel @Inject constructor(
             }
         }
     }
+
+    fun signUpEmailAndPassword(email: String, password: String) = viewModelScope.launch {
+
+    }
 }
